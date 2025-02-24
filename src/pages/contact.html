@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandatype | about page</title>
+    <link rel="icon" type="image/png" href="../assets/panda.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- bootstrap icons -->
+    <link rel="stylesheet" href="../main.css">
+    <script src="../bootstrap.bundle.min.js"></script>
+</head>
+<body class="m-0 p-0 text-secondary vh-100 d-flex flex-column justify-content-between bg-dark">
+    <header class="container p-3">
+        <div class="row align-items-center">
+            <!-- Header Section (Left) -->
+            <div class="col-auto d-flex align-items-center pe-auto">
+                <a id="logo" href="../"  class="text-light text-decoration-none d-flex align-items-center">
+                    <i class="bi bi-keyboard text-warning fs-1 me-2"></i>
+                    <div class="d-none d-md-inline">
+                        <p class="m-0 p-0 fs-6 text-secondary">panda see</p>
+                        <h1 class="m-0 p-0 fs-4">pandatype</h1>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Header Section (Right) -->
+            <nav class="col d-flex justify-content-left align-items-center gap-3">
+                <a id="btn-keyboard" href="../"  class="text-secondary hover-effect" style="--bs-link-hover-color-transform: translate3d(0, -.125rem, 0);"><i class="bi bi-keyboard-fill fs-4"></i></a>
+                
+                <a class="text-secondary hover-effect"><i class="bi bi-info fs-3"></i></a>
+                <a class="text-secondary hover-effect"><i class="bi bi-gear-fill"></i></a>
+                <div class="col-8"></div>
+                <button id="btn-notifications" class="bg-dark border-0 hover-effect"><i class="bi bi-bell-fill text-secondary"></i></button>
+                        <aside id="notification-board" class="position-absolute bg-secondary rounded top-50 start-50 translate-middle w-75 h-75 text-center p-2">
+                            <div class="bg-light m-2 py-2 rounded">
+                                Notification setting for new users and congrats on your new high scores and improvements
+                            </div>
+                            <div class="bg-light m-2 rounded py-2">
+                                Please check out the rest of the site by clicking on the navbar up top
+                            </div>
+                        </aside>
+                <a class="text-secondary hover-effect"><i class="bi bi-person"></i></a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container bg-light text-dark rounded p-4">
+        <form class="needs-validation" novalidate>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="validate-first-name">First name:</label>
+                    <input type="text" class="form-control" id="validate-first-name" placeholder="First name" required/>
+                    <div class="valid-feedback">Great!</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validate-last-name">Last name:</label>
+                    <input type="text" class="form-control" id="validate-last-name" placeholder="Last name" required/>
+                    <div class="valid-feedback">Great!</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validate-user-name">Username:</label>
+                    <input type="text" class="form-control" id="validate-user-name" placeholder="username" required/>
+                    <div class="valid-feedback">Great!</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="validate-email">Email:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                        <input type="email" class="form-control" id="validate-email" placeholder="email@email.com" required />
+                        <div class="invalid-feedback">Please provide a valid email.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validate-phone">Phone number:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                        <input type="tel" class="form-control" id="validate-phone" placeholder="(888) 800-1000" required />
+                        <div class="invalid-feedback">Please provide a valid phone number.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="validate-message">Message:</label>
+                    <textarea class="form-control" id="validate-message" rows="4" required></textarea>
+                    <div class="invalid-feedback">You must enter a message before submitting.</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer class="container py-2 d-inline-flex justify-content-between">
+        <section>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-envelope-fill"></i> <span class="p-1 d-lg-inline d-none">contact</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-coin"></i> <span class="p-1 d-lg-inline d-none">support</span>
+            </a>
+            <a href="https://github.com/TizzleMeDis/FavoriteWebsite" target="_blank" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-code-slash"></i> <span class="p-1 d-lg-inline d-none">github</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-discord"></i> <span class="p-1 d-lg-inline d-none">discord</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-twitter"></i> <span class="p-1 d-lg-inline d-none">twitter</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-receipt-cutoff"></i> <span class="p-1 d-lg-inline d-none">terms</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-shield-shaded"></i> <span class="p-1 d-lg-inline d-none">security</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-lock-fill"></i> <span class="p-1 d-lg-inline d-none">privacy</span>
+            </a>
+        </section>
+        <section>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-palette-fill"></i> <span class="p-1 d-lg-inline d-none">color</span>
+            </a>
+            <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                <i class="bi bi-git"></i> <span class="p-1 d-lg-inline d-none">v1.0</span>
+            </a>
+        </section>
+    </footer>
+    <script src="../js/validating.js"></script>
+</body>
+</html>

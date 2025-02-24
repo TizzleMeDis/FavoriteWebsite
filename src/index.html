@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pandatype | This a copy of monkeytype... Don't sue me <3</title>
+    <link rel="icon" type="image/png" href="./assets/panda.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- bootstrap icons -->
+
+    <link rel="stylesheet" href="main.css">
+    <script src="./bootstrap.bundle.min.js"></script>
+</head>
+<body class="m-0 p-0 text-secondary vh-100 d-flex flex-column justify-content-between bg-dark">
+        <!-- Header/Navbar -->
+        <header class="container p-3">
+            <div class="row align-items-center">
+                <!-- Header Section (Left) -->
+                <div class="col-auto d-flex align-items-center pe-auto">
+                    <a id="logo" href="./"  class="text-light text-decoration-none d-flex align-items-center">
+                        <i class="bi bi-keyboard text-warning fs-1 me-2"></i>
+                        <div class="d-none d-md-inline">
+                            <p class="m-0 p-0 fs-6 text-secondary">panda see</p>
+                            <h1 class="m-0 p-0 fs-4">pandatype</h1>
+                        </div>
+                    </a>
+                </div>
+        
+                <!-- Header Section (Right) -->
+                <nav class="col d-flex justify-content-left align-items-center gap-3">
+                    <a id="btn-keyboard" href="./"  class="text-secondary hover-effect" style="--bs-link-hover-color-transform: translate3d(0, -.125rem, 0);"><i class="bi bi-keyboard-fill fs-4"></i></a>
+                    <button id="btn-leaderboard" class="bg-dark border-0 hover-effect"><i class="bi bi-gem text-secondary"></i></button>
+                        <aside id="leaderboard" class="position-absolute bg-light rounded top-50 start-50 translate-middle w-75 h-75 text-center">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Score</th>
+                                        <th scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>typingGod99</td>
+                                        <td>130 wpm</td>
+                                        <td>2/15/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LookDownNathan</td>
+                                        <td>95 wpm</td>
+                                        <td>2/21/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CreamyKeyboard</td>
+                                        <td>88 wpm</td>
+                                        <td>2/17/2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Meeeeh!</td>
+                                        <td>60 wpm</td>
+                                        <td>2/18/2025</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </aside>
+                    <a class="text-secondary hover-effect" href="./pages/about.html"><i class="bi bi-info fs-3"></i></a>
+                    <a class="text-secondary hover-effect"><i class="bi bi-gear-fill"></i></a>
+                    <div class="col-8"></div>
+                    <button id="btn-notifications" class="bg-dark border-0 hover-effect"><i class="bi bi-bell-fill text-secondary"></i></button>
+                        <aside id="notification-board" class="position-absolute bg-secondary rounded top-50 start-50 translate-middle w-75 h-75 text-center p-2">
+                            <div class="bg-light m-2 py-2 rounded">
+                                Notification setting for new users and congrats on your new high scores and improvements
+                            </div>
+                            <div class="bg-light m-2 rounded py-2">
+                                Please check out the rest of the site by clicking on the navbar up top
+                            </div>
+                        </aside>
+                    <a class="text-secondary hover-effect"><i class="bi bi-person"></i></a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container d-flex flex-column justify-content-between h-100 align-items-center">
+            <!-- Main - section that has the settings -->
+            <section class="py-4 my-4">
+                <!-- When time or word amount or custom is triggered -->
+                <i class="bi bi-exclamation-lg mx-1 py-1"></i><span class="p-1 d-md-inline d-none">punctuation</span>
+                <i class="bi bi-hash mx-1 py-1"></i><span class="p-1 d-md-inline d-none">numbers</span>
+
+
+                <button class="text-warning bg-dark border-0"><i class="bi bi-clock-fill mx-1 py-1"></i><span class="p-1 d-md-inline d-none">time</span></button>
+                <i class="bi bi-alphabet-uppercase mx-1 py-1"></i><span class="p-1 d-md-inline d-none">words</span>
+                <i class="bi bi-quote mx-1 py-1"></i><span class="p-1 d-md-inline d-none">quote</span>
+                <i class="bi bi-yin-yang mx-1 py-1"></i><span class="p-1 d-md-inline d-none">zen</span>
+                <i class="bi bi-wrench mx-1 py-1"></i><span class="p-1 d-md-inline d-none">custom</span>
+
+                <!-- When time or word count is triggered -->
+                <i class="bi bi-tools mx-1 py-1"></i>
+                <!-- When quote is triggered -->
+                <i class="bi bi-search mx-1 py-1"></i>
+            </section>
+            <!-- Main - section that has the text and controls language -->
+            <section class="conatiner-fluid py-2 my-2 text-center">
+                <div class="py-2 my-2">
+                    <i class="bi bi-globe-americas"></i><span class="px-2">english</span> 
+                </div>
+                <div id="word-list" class="container text-center"></div> <!-- All the words generated via javascript -->
+            </section>
+            <!-- Main - section with key tips -->
+            <section class="py-4 my-4 text-center">
+                <div><span class="bg-secondary text-dark px-1 m-1 rounded">tab</span> + <span class="bg-secondary text-dark px-1 m-1 rounded">enter</span> - restart</div>
+                <div><span class="bg-secondary text-dark px-1 m-1 rounded">esc</span> or <span class="bg-secondary text-dark px-1 m-1 rounded">ctrl</span> + <span class="bg-secondary text-dark px-1 m-1 rounded">shift</span> + <span>p</span> - command line</div>
+
+            </section>
+        </main>
+
+        <footer class="container py-2 d-inline-flex justify-content-between">
+            <section>
+                <a href="./pages/contact.html" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-envelope-fill"></i> <span class="p-1 d-lg-inline d-none">contact</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-coin"></i> <span class="p-1 d-lg-inline d-none">support</span>
+                </a>
+                <a href="https://github.com/TizzleMeDis/FavoriteWebsite" target="_blank" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-code-slash"></i> <span class="p-1 d-lg-inline d-none">github</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-discord"></i> <span class="p-1 d-lg-inline d-none">discord</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-twitter"></i> <span class="p-1 d-lg-inline d-none">twitter</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-receipt-cutoff"></i> <span class="p-1 d-lg-inline d-none">terms</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-shield-shaded"></i> <span class="p-1 d-lg-inline d-none">security</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-lock-fill"></i> <span class="p-1 d-lg-inline d-none">privacy</span>
+                </a>
+            </section>
+            <section>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-palette-fill"></i> <span class="p-1 d-lg-inline d-none">color</span>
+                </a>
+                <a href="#" class="text-secondary mx-1 py-1 hover-effect">
+                    <i class="bi bi-git"></i> <span class="p-1 d-lg-inline d-none">v1.0</span>
+                </a>
+            </section>
+        </footer>
+       <script src="./js/index.js"></script> 
+</body>
+</html>

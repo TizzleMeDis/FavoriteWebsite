@@ -1,0 +1,85 @@
+// Custom Theme Variables (Define before Bootstrap Import)
+$bg-color: #323437;
+$main-color: #e2b714;
+$caret-color: #e2b714;
+$sub-color: #646669;
+$sub-alt-color: #2c2e31;
+$text-color: #d1d0c5;
+$error-color: #ca4754;
+$error-extra-color: #7e2a33;
+$colorful-error-color: #ca4754;
+$colorful-error-extra-color: #7e2a33;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.bg-color {
+    background-color: $bg-color ;
+}
+
+.main-color {
+    color: $main-color;
+}
+
+.caret-color {
+    color: $caret-color;
+}
+
+.sub-color {
+    color: $sub-color;
+}
+
+.sub-alt-color {
+    background-color: $sub-alt-color;
+}
+
+.text-color {
+    color: $text-color;
+}
+
+.error-color {
+    color: $error-color;
+}
+
+.error-extra-color { // For when text is supposed to be spaced or wrong before letter
+    color: $error-extra-color;
+}
+
+.colorful-error-color {
+    color: $colorful-error-color;
+}
+
+.colorful-error-extra-color {
+    color: $colorful-error-extra-color;
+}
+
+// Hover Effect
+
+header .hover-effect {
+    transition: all 0.3s ease-in-out !important;
+}
+
+header .hover-effect:hover {
+    color: $text-color !important;  // Use your theme color instead of --bs-warning
+    transform: scale(1.1) !important;  // Slightly enlarge
+}
+
+
+footer .hover-effect {
+    transition: all 0.3s ease-in-out !important;
+}
+
+footer .hover-effect:hover {
+    color: $text-color !important;  // Use your theme color instead of --bs-warning
+    transform: scale(1.1) !important;  // Slightly enlarge
+}
+
+// Hover Effect
+main .hover-effect {
+    transition: all 0.3s ease-in-out !important;
+}
+
+main .hover-effect:hover {
+    color: $main-color !important;  // Use your theme color instead of --bs-warning
+    transform: scale(1.1) !important;  // Slightly enlarge
+}
+
